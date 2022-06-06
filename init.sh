@@ -4,11 +4,13 @@ sudo snap install --classic cmake code nvim \
 	# curl # snap curl has some permission problem
 sudo snap install yt-dlp htop aria2c \
 	universal-ctags # for tagbar
-sudo apt install -y g++ git python3-pip tmux mpv curl \
+sudo apt install -y g++ git python3-pip tmux mpv curl direnv \
 	sysstat     # for tmux-cpu
 	nodejs npm  # for coc.vim
 	silversearcher-ag # for ctrlp
 sudo pip3 install --user --upgrade conan ninja
+
+echo "eval \"$(direnv hook bash)\"" >> ~/.bashrc
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
