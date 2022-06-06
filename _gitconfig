@@ -1,0 +1,29 @@
+[commit]
+        gpgSign = true
+
+[core]
+        editor = "vi"
+
+[diff]
+        tool = "vimdiff"
+
+[difftool]
+        prompt = false
+
+[init]
+        defaultBranch = "main"
+
+[merge]
+        tool = "vimdiff"
+
+[pull]
+        ff = "only"
+        rebase = true
+
+[rebase]
+        autoStash = true
+
+[user]
+        email = "2188767+mo-xiaoming@users.noreply.github.com"
+        name = "Mo Xiaoming"
+        signingKey = "2B2FF1E29E07A36B"

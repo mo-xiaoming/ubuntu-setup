@@ -1,0 +1,82 @@
+{
+  "Lua.IntelliSense.traceBeSetted": true,
+  "Lua.IntelliSense.traceFieldInject": true,
+  "Lua.IntelliSense.traceLocalSet": true,
+  "Lua.IntelliSense.traceReturn": true,
+  "Lua.hint.setType": true,
+  "clangd.fallbackFlags": [
+    "-std=gnu++20",
+    "-Wall",
+    "-Wextra",
+    "-Wshadow"
+  ],
+  "clangd.semanticHighlighting": true,
+  "clangd.checkUpdates": true,
+  "coc.preferences.colorSupport": true,
+  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+  "coc.preferences.enableMessageDialog": true,
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "rust"
+  ],
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.semanticTokensHighlights": false,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.floatConfig": {
+    "border": true,
+    "title": "diagnostic"
+  },
+  "diagnostic.separateRelatedInformationAsDiagnostics": true,
+  "hover.floatConfig": {
+    "border": true,
+    "title": "hover"
+  },
+  "languageserver": {
+    "haskell": {
+      "args": [
+        "--lsp"
+      ],
+      "command": "haskell-language-server-wrapper",
+      "filetypes": [
+        "haskell",
+        "lhaskell"
+      ],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml",
+        "hie.yaml"
+      ]
+    }
+  },
+  "rust-analyzer.assist.importEnforceGranularity": true,
+  "rust-analyzer.cargo.allFeatures": true,
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.experimental.procAttrMacros": true,
+  "rust-analyzer.hoverActions.linksInHover": true,
+  "rust-analyzer.inlayHints.refreshOnInsertMode": true,
+  "rust-analyzer.lens.methodReferences": true,
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.rustfmt.enableRangeFormatting": true,
+  "signature.floatConfig": {
+    "border": true,
+    "title": "signature"
+  },
+  "suggest.disableKind": true,
+  "suggest.enablePreselect": false,
+  "suggest.enablePreview": true,
+  "suggest.floatConfig": {
+    "border": true,
+    "title": "suggest"
+  },
+  "suggest.noselect": true,
+  "suggest.removeDuplicateItems": true,
+  "sumneko-lua.enableNvimLuaDev": true,
+  "sumneko-lua.inlayHints.refreshOnInsertMode": true,
+  "cSpell.userWords": [
+    "clangd",
+    "cmake"
+  ],
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd"
+}

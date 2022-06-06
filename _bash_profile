@@ -1,0 +1,14 @@
+alias yt-dlp-list="yt-dlp -o '%(playlist_index)03d-%(title)s-%(id)s.%(ext)s'"
+alias vi="nvim"
+alias vim="nvim"
+alias vimdiff="nvim -d"
+alias view="nvim -R"
+
+alias ls="ls --color=auto";
+alias grep="grep --color=auto";
+alias egrep="egrep --color=auto";
+alias fgrep="fgrep --color=auto";
+alias ll="ls -alF";
+
+export GPG_TTY=$(tty)
+. "$HOME/.cargo/env"
