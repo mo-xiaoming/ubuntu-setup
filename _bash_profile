@@ -11,4 +11,5 @@ alias fgrep="fgrep --color=auto";
 alias ll="ls -alF";
 
 export GPG_TTY=$(tty)
+
 . "$HOME/.cargo/env"
