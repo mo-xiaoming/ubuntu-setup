@@ -11,6 +11,7 @@ git clone --depth=1 https://github.com/llvm/llvm-project.git llvm-${LLVM_VER} -b
 
 ```bash
 TARGET_TRIPLE=x86_64-unknown-linux-gnu
+
 #cmake -G Ninja -S llvm -B build -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;lldb;compiler-rt;lld;polly" \  #Configure
 #                                -DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi;libunwind" \
 #                                -DLLVM_RUNTIME_TARGETS=${TARGET_TRIPLE} \
@@ -31,4 +32,6 @@ ninja -C build check-runtimes                                                   
 ninja -C build install-runtimes
 ```
 
+```bash
 clang++ -nostdinc++ -nostdlib++ -isystem $LLVM_PATH/include/c++/v1 -isystem $LLVM_PATH/include/${TARGET_TRIPLE}/c++/v1 -L $LLVM_PATH/lib/${TARGET_TRIPLE} -Wl,-rpath,$LLVM_PATH/lib/${TARGET_TRIPLE} -lc++
+```

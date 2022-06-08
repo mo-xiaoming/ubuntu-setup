@@ -20,5 +20,14 @@
     "clangd.path": "/home/mx/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/14.0.3/clangd_14.0.3/bin/clangd",
     "[cpp]": {
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
-    }
+    },
+    "cSpell.userWords": [
+        "clion",
+        "cmake",
+        "conancenter",
+        "conanfile",
+        "libcxx",
+        "libstdc",
+        "mkdir"
+    ]
 }
