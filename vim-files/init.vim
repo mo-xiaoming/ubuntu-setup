@@ -90,6 +90,7 @@ cnoremap <C-h> <BS>
 lua <<EOF
 vim.opt.list = true
 require("indent_blankline").setup {}
+  space_char_blankline = ' '
 EOF
 
 """""""""""""""""""""" luochen1990/rainbow
@@ -299,4 +300,3 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 """""""""""""""""""""" hobbes syntax """""""""""""""
 au BufRead,BufNewfile *.hob set filetype=hobbes
-au BufRead,BufNewfile *.das set filetype=daScript
