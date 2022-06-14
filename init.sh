@@ -12,7 +12,7 @@ install_system_packages() {
   sudo snap install --classic code nvim \
     # curl # snap curl has some permission problem
   sudo snap install yt-dlp htop aria2c
-  sudo apt install -y g++ git python3-pip tmux mpv curl direnv openssh-server pkg-config \
+  sudo apt install -y g++ git python3-pip tmux mpv curl direnv openssh-server pkg-config cmake-format valgrind \
     sysstat     # for tmux-cpu
     nodejs npm  # for coc.vim
     silversearcher-ag # for ctrlp
@@ -95,6 +95,8 @@ EOF
   export GPG_TTY=$(tty)
 
   export EDITOR=/snap/bin/nvim
+
+  export VCPKG_ROOT=$HOME/repos/toolchains/vcpkg
 EOF
 }
 

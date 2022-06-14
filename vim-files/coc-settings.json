@@ -76,15 +76,20 @@
   "sumneko-lua.inlayHints.refreshOnInsertMode": true,
   "cSpell.userWords": [
     "Makefiles",
+    "NOLINTNEXTLINE",
     "armv",
     "clangd",
     "cmake",
     "conancenter",
     "conanfile",
+    "doctest",
     "gnueabihf",
     "libcxx",
     "libstdc",
-    "mkdir"
+    "mkdir",
+    "rparen",
+    "spdlog",
+    "vcpkg"
   ],
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/14.0.3/clangd_14.0.3/bin/clangd"
 }

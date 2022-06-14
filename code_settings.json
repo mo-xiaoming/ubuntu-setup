@@ -1,6 +1,6 @@
 {
     "workbench.iconTheme": "vscode-icons",
-    "editor.fontSize": 13,
+    "editor.fontSize": 12,
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "modificationsIfAvailable",
     "rust-analyzer.inlayHints.bindingModeHints.enable": true,
@@ -13,7 +13,6 @@
     "rust-analyzer.lens.references.adt.enable": true,
     "rust-analyzer.lens.references.method.enable": true,
     "rust-analyzer.lens.references.trait.enable": true,
-    "vim.enableNeovim": true,
     "vim.highlightedyank.enable": true,
     "vim.hlsearch": true,
     "workbench.startupEditor": "none",
@@ -22,12 +21,25 @@
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
     },
     "cSpell.userWords": [
+        "beginsym",
         "clion",
         "cmake",
         "conancenter",
         "conanfile",
+        "cppcoreguidelines",
+        "declval",
+        "DOCTEST",
+        "hicpp",
         "libcxx",
         "libstdc",
-        "mkdir"
-    ]
+        "loggable",
+        "mkdir",
+        "NOLINTNEXTLINE",
+        "rparen",
+        "spdlog",
+        "SUBCASE"
+    ],
+    "cmake.configureOnOpen": true,
+    "editor.tabSize": 2,
+    "window.zoomLevel": 1
 }

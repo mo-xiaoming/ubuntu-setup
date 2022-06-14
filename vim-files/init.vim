@@ -27,7 +27,9 @@ Plug 'preservim/tagbar'
 
 Plug 'wfxr/minimap.vim', {'do': ':!cargo install --locked code-minimap'}
 
-Plug 'lukas-reineke/indent-blankline.nvim'
+"Plug 'lukas-reineke/indent-blankline.nvim'
+
+Plug 'embear/vim-localvimrc'
 
 call plug#end()
 
@@ -87,11 +89,11 @@ cnoremap <C-d> <Del>
 cnoremap <C-h> <BS>
 
 """""""""""""""""""""" lukas-reineke/indent-blankline.nvim
-lua <<EOF
-vim.opt.list = true
-require("indent_blankline").setup {}
-  space_char_blankline = ' '
-EOF
+"lua <<EOF
+"vim.opt.list = true
+"require("indent_blankline").setup {}
+"  space_char_blankline = ' '
+"EOF
 
 """""""""""""""""""""" luochen1990/rainbow
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
