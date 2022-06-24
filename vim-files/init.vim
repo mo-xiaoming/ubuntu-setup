@@ -46,6 +46,10 @@ set path+=**
 set diffopt+=internal,algorithm:patience
 
 set number
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu && mode() != "i" | set rnu   | endif
+:  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 set signcolumn=yes
 
 "set showmode    " status line displays 'insert' or 'visual' when not in normal mode
@@ -94,6 +98,9 @@ cnoremap <C-h> <BS>
 "require("indent_blankline").setup {}
 "  space_char_blankline = ' '
 "EOF
+
+"""""""""""""""""""""" embear/vim-localvimrc
+let g:localvimrc_persistent = 1
 
 """""""""""""""""""""" luochen1990/rainbow
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
