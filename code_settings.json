@@ -1,6 +1,5 @@
 {
     "workbench.iconTheme": "vscode-icons",
-    "editor.fontSize": 12,
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "modificationsIfAvailable",
     "rust-analyzer.inlayHints.bindingModeHints.enable": true,
@@ -8,7 +7,6 @@
     "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "always",
     "rust-analyzer.inlayHints.maxLength": null,
     "rust-analyzer.inlayHints.reborrowHints.enable": "always",
-    "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
     "rust-analyzer.lens.references.enumVariant.enable": true,
     "rust-analyzer.lens.references.adt.enable": true,
     "rust-analyzer.lens.references.method.enable": true,
@@ -22,11 +20,13 @@
     },
     "cSpell.userWords": [
         "beginsym",
+        "brainfuck",
         "clion",
         "cmake",
         "conancenter",
         "conanfile",
         "cppcoreguidelines",
+        "cruit",
         "declval",
         "DOCTEST",
         "hicpp",
@@ -37,9 +37,11 @@
         "NOLINTNEXTLINE",
         "rparen",
         "spdlog",
-        "SUBCASE"
+        "SUBCASE",
+        "Xiaoming"
     ],
     "cmake.configureOnOpen": true,
-    "editor.tabSize": 2,
-    "window.zoomLevel": 1
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.size": "fill",
+    "rust-analyzer.checkOnSave.command": "clippy"
 }
