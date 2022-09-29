@@ -73,16 +73,16 @@ set splitright
 set confirm
 
 " insert mode
-inoremap <C-c> <ESC>
-inoremap <C-w> <C-[>diwa
-inoremap <C-h> <BS>
-inoremap <C-d> <Del>
-inoremap <C-u> <C-G>u<C-U>
-inoremap <C-b> <Left>
-inoremap <C-f> <Right>
-inoremap <C-a> <Home>
-inoremap <C-n> <Down>
-inoremap <C-p> <Up>
+"inoremap <C-c> <ESC>
+"inoremap <C-w> <C-[>diwa
+"inoremap <C-h> <BS>
+"inoremap <C-d> <Del>
+"inoremap <C-u> <C-G>u<C-U>
+"inoremap <C-b> <Left>
+"inoremap <C-f> <Right>
+"inoremap <C-a> <Home>
+"inoremap <C-n> <Down>
+"inoremap <C-p> <Up>
 
 " command line mappings
 cnoremap <C-a> <Home>
@@ -117,6 +117,9 @@ set updatetime=100
 let g:minimap_highlight_range = 1
 let g:minimap_highlight_search = 1
 let g:minimap_git_colors = 1
+
+"""""""""""""""""""""" hobbes syntax """""""""""""""
+au BufRead,BufNewfile *.hob set filetype=hobbes
 
 """""""""""""""""""""" ctrlp
 let g:ctrlp_match_window = 'results:100' " overcome limit imposed by max height
@@ -177,18 +180,21 @@ set cmdheight=2
 "set updatetime=300 " it seesm vim-signify needs a much shorter time period
 
 " don't give |ins-completion-menu| messages.
-set shortmess+=c
+"set shortmess+=c
 
-" conflict with coc.nvim
-"
-"" Use tab for trigger completion with characters ahead and navigate.
-"" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-"" other plugin before putting this into your config.
-"inoremap <silent><expr> <TAB>
-"      \ pumvisible() ? "\<C-n>" :
-"      \ CheckBackspace() ? "\<TAB>" :
-"      \ coc#refresh()
-"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1):
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! CheckBackspace() abort
   let col = col('.') - 1
@@ -202,24 +208,18 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-" conflict with coc.nvim
-"
-"" Make <CR> auto-select the first completion item and notify coc.nvim to
-"" format on enter, <cr> could be remapped by other vim plugin
-"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm(): "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
-nmap <leader>gD <Plug>(coc-declaration)
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gy <Plug>(coc-type-definition)
-nmap <leader>gi <Plug>(coc-implementation)
-nmap <leader>gr <Plug>(coc-references)
-nmap <leader>rn <Plug>(coc-rename)
+nmap <silent> gD <Plug>(coc-declaration)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> rn <Plug>(coc-rename)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call ShowDocumentation()<CR>
@@ -314,6 +314,3 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
-"""""""""""""""""""""" hobbes syntax """""""""""""""
-au BufRead,BufNewfile *.hob set filetype=hobbes
