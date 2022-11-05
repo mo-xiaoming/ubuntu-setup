@@ -1,12 +1,11 @@
 {
-    "workbench.iconTheme": "vscode-icons",
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "modificationsIfAvailable",
-    "rust-analyzer.inlayHints.maxLength": null,
-    "vim.highlightedyank.enable": true,
+    "remote.SSH.remotePlatform": {
+        "skelix.xicp.io": "linux"
+    },
+    "workbench.iconTheme": "material-icon-theme",
     "vim.hlsearch": true,
     "workbench.startupEditor": "none",
-    "clangd.path": "/home/mx/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/14.0.3/clangd_14.0.3/bin/clangd",
+    "clangd.path": "/home/mx/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/15.0.3/clangd_15.0.3/bin/clangd",
     "[cpp]": {
         "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
     },
@@ -14,7 +13,9 @@
         "beginsym",
         "brainfuck",
         "clion",
+        "clippy",
         "cmake",
+        "combinators",
         "conancenter",
         "conanfile",
         "cppcoreguidelines",
@@ -29,12 +30,42 @@
         "mkdir",
         "NOLINTNEXTLINE",
         "rparen",
+        "rustfmt",
         "spdlog",
+        "strtok",
         "SUBCASE",
         "Xiaoming"
     ],
+    "clangd.checkUpdates": true,
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning",
+        "info",
+        "hint"
+    ],
+    "errorLens.messageTemplate": "[$source] ($count): $message",
+    "editor.minimap.enabled": false,
+    "calva.paredit.defaultKeyMap": "strict",
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "terminal.integrated.allowChords": false,
+    "git.confirmSync": false,
+    "settingsSync.ignoredSettings": [
+        "editor.fontSize",
+        "workbench.colorTheme"
+    ],
+    "tabnine.experimentalAutoImports": true,
+    "editor.autoClosingBrackets": "never",
+    "editor.accessibilitySupport": "off",
     "cmake.configureOnOpen": true,
-    "editor.minimap.showSlider": "always",
-    "editor.minimap.size": "fill",
-    "rust-analyzer.checkOnSave.command": "clippy"
+    "clangd.arguments": [
+        "--completion-style=detailed",
+        "--all-scopes-completion",
+        "--cross-file-rename",
+        "--header-insertion-decorators",
+        "--header-insertion=iwyu",
+        "--pch-storage=memory"
+    ],
+    "editor.formatOnSave": true,
+    "license.default": "mit"
 }

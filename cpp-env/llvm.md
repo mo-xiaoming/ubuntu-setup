@@ -1,12 +1,13 @@
 ## download source
 
 ```bash
-LLVM_VER=14.0.4
+LLVM_VER=15.0.3
 git clone --depth=1 https://github.com/llvm/llvm-project.git llvm-${LLVM_VER} -b llvmorg-${LLVM_VER} --single-branch
 ```
 
 ```bash
 cmake -G Ninja -S llvm -B build -DLLVM_OPTIMIZED_TABLEGEN=ON -DLLVM_TARGETS_TO_BUILD=X86 -DCMAKE_INSTALL_PREFIX=$PWD/install -DLLVM_USE_SPLIT_DWARF=ON -DLLVM_USE_SANITIZER="Address"
+cmake -G Ninja -S llvm -B build -DLLVM_OPTIMIZED_TABLEGEN=ON -DLLVM_TARGETS_TO_BUILD=X86 -DCMAKE_INSTALL_PREFIX=$PWD/install -DLLVM_USE_SPLIT_DWARF=ON -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra" -DCMAKE_BUILD_TYPE=Debug
 ```
 
 #git fetch --unshallow # to contribute?

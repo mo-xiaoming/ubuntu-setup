@@ -92,6 +92,7 @@ cnoremap <C-e> <End>
 cnoremap <C-d> <Del>
 cnoremap <C-h> <BS>
 
+
 """""""""""""""""""""" f-person/git-blame.nvim
 let g:gitblame_date_format = '%y/%m/%d %H:%M:%S'
 let g:gitblame_highlight_group = "NonText"
