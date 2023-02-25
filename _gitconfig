@@ -2,7 +2,7 @@
         gpgSign = true
 
 [core]
-        editor = "vi"
+        editor = "nvim"
 
 [diff]
         tool = "vimdiff"

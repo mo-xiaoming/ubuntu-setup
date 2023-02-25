@@ -12,10 +12,14 @@
     "cSpell.userWords": [
         "beginsym",
         "brainfuck",
+        "canonicalize",
+        "chdir",
         "clion",
         "clippy",
         "cmake",
+        "codecov",
         "combinators",
+        "compiledb",
         "conancenter",
         "conanfile",
         "cppcoreguidelines",
@@ -23,17 +27,29 @@
         "declval",
         "deref",
         "DOCTEST",
+        "Doctests",
         "hicpp",
+        "Inlinable",
+        "leetcode",
         "libcxx",
         "libstdc",
         "loggable",
         "mkdir",
+        "nanos",
+        "nextest",
         "NOLINTNEXTLINE",
+        "Peekable",
+        "RAII",
         "rparen",
         "rustfmt",
         "spdlog",
         "strtok",
         "SUBCASE",
+        "testcase",
+        "textcolor",
+        "textsf",
+        "uninit",
+        "vcpkg",
         "Xiaoming"
     ],
     "clangd.checkUpdates": true,
@@ -67,5 +83,12 @@
         "--pch-storage=memory"
     ],
     "editor.formatOnSave": true,
-    "license.default": "mit"
+    "license.default": "mit",
+    "terminal.integrated.gpuAcceleration": "canvas",
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "files.associations": {
+        "*.C": "cpp"
+    }
 }
