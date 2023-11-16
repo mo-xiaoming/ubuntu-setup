@@ -55,13 +55,13 @@ function register_clang_version {
         --slave   /usr/bin/llvm-tblgen          llvm-tblgen          /usr/bin/llvm-tblgen-${version} \
         --slave   /usr/bin/llvm-undname         llvm-undname         /usr/bin/llvm-undname-${version} \
         --slave   /usr/bin/llvm-xray            llvm-xray            /usr/bin/llvm-xray-${version}
-        
 
     update-alternatives \
        	--verbose \
         --install /usr/bin/clang					clang					/usr/bin/clang-${version} ${priority} \
         --slave   /usr/bin/clang++					clang++					/usr/bin/clang++-${version}  \
         --slave   /usr/bin/clang-format				clang-format			/usr/bin/clang-format-${version}  \
+        --slave   /usr/bin/clang-tidy				clang-tidy			/usr/bin/clang-tidy-${version}  \
         --slave   /usr/bin/clang-cpp				clang-cpp				/usr/bin/clang-cpp-${version} \
         --slave   /usr/bin/asan_symbolize			asan_symbolize			/usr/bin/asan_symbolize-${version} \
         --slave   /usr/bin/bugpoint					bugpoint				/usr/bin/bugpoint-${version} \
@@ -77,7 +77,6 @@ function register_clang_version {
         --slave   /usr/bin/verify-uselistorder		verify-uselistorder		/usr/bin/verify-uselistorder-${version} \
         --slave   /usr/bin/wasm-ld					wasm-ld					/usr/bin/wasm-ld-${version} \
         --slave   /usr/bin/yaml2obj					yaml2obj					/usr/bin/yaml2obj-${version}
-        
 }
 
 register_clang_version $1 $2
