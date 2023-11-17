@@ -156,6 +156,16 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+"""""""""""""""""""""" coc.nvim
+"let g:coc_global_extensions = [
+"      \ 'coc-json',
+"      \ 'coc-spell-checker'
+"      \ 'coc-clangd'
+"      \ 'coc-explorer'
+"      \ 'coc-rust-analyzer'
+"      \ 'coc-copilot'
+"      \ ]
+
 """""""""""""""""""""" coc-clangd
 nnoremap <Leader>si  :CocCommand clangd.symbolInfo<CR>
 nnoremap <Leader>sh  :CocCommand clangd.switchSourceHeader<CR>

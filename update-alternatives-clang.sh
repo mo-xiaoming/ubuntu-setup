@@ -59,10 +59,32 @@ function register_clang_version {
     update-alternatives \
        	--verbose \
         --install /usr/bin/clang					clang					/usr/bin/clang-${version} ${priority} \
-        --slave   /usr/bin/clang++					clang++					/usr/bin/clang++-${version}  \
-        --slave   /usr/bin/clang-format				clang-format			/usr/bin/clang-format-${version}  \
-        --slave   /usr/bin/clang-tidy				clang-tidy			/usr/bin/clang-tidy-${version}  \
-        --slave   /usr/bin/clang-cpp				clang-cpp				/usr/bin/clang-cpp-${version} \
+        --slave   /usr/bin/clang++       clang++        /usr/bin/clang++-${version} \
+        --slave   /usr/bin/clang-apply-replacements       clang-apply-replacements        /usr/bin/clang-apply-replacements-${version} \
+        --slave   /usr/bin/clang-change-namespace       clang-change-namespace        /usr/bin/clang-change-namespace-${version} \
+        --slave   /usr/bin/clang-check       clang-check        /usr/bin/clang-check-${version} \
+        --slave   /usr/bin/clang-cl       clang-cl        /usr/bin/clang-cl-${version} \
+        --slave   /usr/bin/clang-cpp       clang-cpp        /usr/bin/clang-cpp-${version} \
+        --slave   /usr/bin/clang-doc       clang-doc        /usr/bin/clang-doc-${version} \
+        --slave   /usr/bin/clang-extdef-mapping       clang-extdef-mapping        /usr/bin/clang-extdef-mapping-${version} \
+        --slave   /usr/bin/clang-format       clang-format        /usr/bin/clang-format-${version} \
+        --slave   /usr/bin/clang-format-diff       clang-format-diff        /usr/bin/clang-format-diff-${version} \
+        --slave   /usr/bin/clang-include-cleaner       clang-include-cleaner        /usr/bin/clang-include-cleaner-${version} \
+        --slave   /usr/bin/clang-include-fixer       clang-include-fixer        /usr/bin/clang-include-fixer-${version} \
+        --slave   /usr/bin/clang-linker-wrapper       clang-linker-wrapper        /usr/bin/clang-linker-wrapper-${version} \
+        --slave   /usr/bin/clang-move       clang-move        /usr/bin/clang-move-${version} \
+        --slave   /usr/bin/clang-offload-bundler       clang-offload-bundler        /usr/bin/clang-offload-bundler-${version} \
+        --slave   /usr/bin/clang-offload-packager       clang-offload-packager        /usr/bin/clang-offload-packager-${version} \
+        --slave   /usr/bin/clang-pseudo       clang-pseudo        /usr/bin/clang-pseudo-${version} \
+        --slave   /usr/bin/clang-query       clang-query        /usr/bin/clang-query-${version} \
+        --slave   /usr/bin/clang-refactor       clang-refactor        /usr/bin/clang-refactor-${version} \
+        --slave   /usr/bin/clang-rename       clang-rename        /usr/bin/clang-rename-${version} \
+        --slave   /usr/bin/clang-reorder-fields       clang-reorder-fields        /usr/bin/clang-reorder-fields-${version} \
+        --slave   /usr/bin/clang-repl       clang-repl        /usr/bin/clang-repl-${version} \
+        --slave   /usr/bin/clang-scan-deps       clang-scan-deps        /usr/bin/clang-scan-deps-${version} \
+        --slave   /usr/bin/clang-tblgen       clang-tblgen        /usr/bin/clang-tblgen-${version} \
+        --slave   /usr/bin/clang-tidy       clang-tidy        /usr/bin/clang-tidy-${version} \
+        --slave   /usr/bin/clangd       clangd        /usr/bin/clangd-${version} \
         --slave   /usr/bin/asan_symbolize			asan_symbolize			/usr/bin/asan_symbolize-${version} \
         --slave   /usr/bin/bugpoint					bugpoint				/usr/bin/bugpoint-${version} \
         --slave   /usr/bin/dsymutil					dsymutil				/usr/bin/dsymutil-${version} \
