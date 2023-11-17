@@ -164,6 +164,17 @@ endif
 "      \ 'coc-explorer'
 "      \ 'coc-rust-analyzer'
 "      \ 'coc-copilot'
+"      \ 'coc-yaml'
+"      \ 'coc-xml'
+"      \ 'coc-toml'
+"      \ 'coc-sh'
+"      \ 'coc-pyright'
+"      \ 'coc-markdownlint'
+"      \ 'coc-markdown-preview-enhanced'
+"      \ 'coc-highlight'
+"      \ 'coc-git'
+"      \ 'coc-docker'
+"      \ 'coc-cmake'
 "      \ ]
 
 """""""""""""""""""""" coc-clangd
