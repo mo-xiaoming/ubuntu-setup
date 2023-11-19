@@ -114,5 +114,4 @@
     "vcpkg",
     "xiaoming"
   ],
-  "clangd.path": "/usr/bin/clangd-15"
 }
