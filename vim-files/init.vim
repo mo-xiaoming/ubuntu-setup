@@ -157,25 +157,25 @@ if executable('ag')
 endif
 
 """""""""""""""""""""" coc.nvim
-"let g:coc_global_extensions = [
-"      \ 'coc-json',
-"      \ 'coc-spell-checker'
-"      \ 'coc-clangd'
-"      \ 'coc-explorer'
-"      \ 'coc-rust-analyzer'
-"      \ 'coc-copilot'
-"      \ 'coc-yaml'
-"      \ 'coc-xml'
-"      \ 'coc-toml'
-"      \ 'coc-sh'
-"      \ 'coc-pyright'
-"      \ 'coc-markdownlint'
-"      \ 'coc-markdown-preview-enhanced'
-"      \ 'coc-highlight'
-"      \ 'coc-git'
-"      \ 'coc-docker'
-"      \ 'coc-cmake'
-"      \ ]
+let g:coc_global_extensions = [
+      \ 'coc-json',
+      \ 'coc-spell-checker',
+      \ 'coc-clangd',
+      \ 'coc-explorer',
+      \ 'coc-rust-analyzer',
+      \ 'coc-copilot',
+      \ 'coc-yaml',
+      \ 'coc-xml',
+      \ 'coc-toml',
+      \ 'coc-sh',
+      \ 'coc-pyright',
+      \ 'coc-markdownlint',
+      \ 'coc-markdown-preview-enhanced',
+      \ 'coc-highlight',
+      \ 'coc-git',
+      \ 'coc-docker',
+      \ 'coc-cmake',
+      \ ]
 
 """""""""""""""""""""" coc-clangd
 nnoremap <Leader>si  :CocCommand clangd.symbolInfo<CR>
