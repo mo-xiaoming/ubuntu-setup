@@ -1,3 +1,5 @@
+[alias]
+        dw = diff --word-diff --ignore-all-space
 [commit]
         gpgSign = true
 
@@ -6,7 +8,8 @@
 
 [diff]
         tool = "vimdiff"
-
+        algorithm = patience
+        wordRegex = .
 [difftool]
         prompt = false
 
@@ -27,3 +30,9 @@
         email = "2188767+mo-xiaoming@users.noreply.github.com"
         name = "Mo Xiaoming"
         signingKey = "2B2FF1E29E07A36B"
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

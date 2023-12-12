@@ -15,8 +15,36 @@ install_system_packages() {
     sysstat     \ # for tmux-cpu
     nodejs npm  \ # for coc.vim
     silversearcher-ag  \ # for ctrlp
-    yt-dlp htop aria2c nvim
+    yt-dlp htop aria2c nvim \
+    zsh
   sudo pip3 install --user --upgrade conan ninja cmake
+}
+
+install_zsh {
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+#ZSH_THEME="rkj-repos"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+#plugins=(git docker zsh-autosuggestions zsh-syntax-highlighting)
+cat <<EOF>> ~/.zshrc
+. "$HOME/.cargo/env"
+
+bindkey '	' complete-word
+bindkey '[Z' autosuggest-accept
+
+alias yt-dlp-list="yt-dlp -o '%(playlist_index)03d-%(title)s-%(id)s.%(ext)s'"
+alias vi="nvim"
+alias vim="nvim"
+alias vimdiff="nvim -d"
+alias view="nvim -R"
+
+export GPG_TTY=$(tty)
+
+export EDITOR=/snap/bin/nvim
+
+EOF
 }
 
 install_git_files() {
@@ -126,6 +154,7 @@ install_nvim() {
 
 manual_install
 install_system_packages
+install_zsh
 install_git_files
 install_misc_sym_links
 install_cpp_env
